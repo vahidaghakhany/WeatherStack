@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Text
+    <item name="textXXXXXXLarge" type="dimen">52sp</item>
+    <item name="textXXXXXLarge" type="dimen">40sp</item>
+    <item name="textXXXXLarge" type="dimen">34sp</item>
+    <item name="textXXXLarge" type="dimen">28sp</item>
+    <item name="textXXLarge" type="dimen">24sp</item>
+    <item name="textXLarge" type="dimen">20sp</item>
+    <item name="textLarge" type="dimen">18sp</item>
+    <item name="textMedium" type="dimen">16sp</item>
+    <item name="textSmall" type="dimen">14sp</item>
+    <item name="textXSmall" type="dimen">12sp</item>
+    <item name="textXXSmall" type="dimen">10sp</item>
+
+
+    //Spacing
+    <item name="spacingXXXXXLarge" type="dimen">56dp</item>
+    <item name="spacingXXXXLarge" type="dimen">48dp</item>
+    <item name="spacingXXXLarge" type="dimen">44dp</item>
+    <item name="spacingXXLarge" type="dimen">40dp</item>
+    <item name="spacingXLarge" type="dimen">36dp</item>
+    <item name="spacingLarge" type="dimen">32dp</item>
+    <item name="spacingMedium" type="dimen">28dp</item>
+    <item name="spacingSmall" type="dimen">24dp</item>
+    <item name="spacingXSmall" type="dimen">20dp</item>
+    <item name="spacingXXSmall" type="dimen">16dp</item>
+    <item name="spacingXXXSmall" type="dimen">12dp</item>
+    <item name="spacingXXXXSmall" type="dimen">8dp</item>
+    <item name="spacingXXXXYSmall" type="dimen">6dp</item>
+    <item name="spacingXXXXXSmall" type="dimen">4dp</item>
+    <item name="spacingXXXXXXSmall" type="dimen">2dp</item>
+
+
+
+    <dimen name="bottom_navigation_min_width">56dp</dimen>
+
+</resources>

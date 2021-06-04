@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/locationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather Location"
+        android:textSize="@dimen/textMedium"
+        android:layout_marginTop="@dimen/spacingMedium"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deviceLocationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use Device Location"
+        app:layout_constraintTop_toBottomOf="@id/locationTxt"
+        android:textSize="@dimen/textXLarge"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="@dimen/spacingMedium"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/deviceLocationSw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacingMedium"
+        app:layout_constraintBottom_toBottomOf="@+id/deviceLocationTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/deviceLocationTxt" />
+
+    <TextView
+        android:id="@+id/setLocationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Location"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/deviceLocationTxt"
+        android:textSize="@dimen/textXLarge"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?selectableItemBackground"
+        android:layout_marginTop="@dimen/spacingMedium"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <View
+        android:id="@+id/lineVw"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/setLocationTxt"
+        android:layout_marginTop="@dimen/spacingXXXLarge"
+        android:background="@color/gray4"
+        />
+
+    <TextView
+        android:id="@+id/unitTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit"
+        android:textSize="@dimen/textMedium"
+        android:layout_marginTop="@dimen/spacingMedium"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineVw" />
+
+    <TextView
+        android:id="@+id/setUnitTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Unit"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/unitTxt"
+        android:textSize="@dimen/textXLarge"
+        android:layout_marginTop="@dimen/spacingMedium"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

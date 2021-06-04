@@ -1,0 +1,3 @@
+rootProject.name = "WeatherStack"
+include ':app'
+include ':core'

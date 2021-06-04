@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/weatherTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sunny"
+        android:textSize="@dimen/textXXXXLarge"
+        android:layout_marginTop="@dimen/spacingMedium"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/degreeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="23.9 C"
+        android:textSize="@dimen/textXXXXXXLarge"
+        android:layout_marginTop="@dimen/spacingXXXXXLarge"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherTypeTxt" />
+
+    <TextView
+        android:id="@+id/feelLikeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Feels Like 25 C"
+        android:textSize="@dimen/textXLarge"
+        android:layout_marginTop="@dimen/spacingXXSmall"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/degreeTxt" />
+
+    <TextView
+        android:id="@+id/windTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="wind:"
+        android:textSize="@dimen/textXXLarge"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/spacingXXXXXLarge"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feelLikeTxt" />
+
+    <TextView
+        android:id="@+id/precipitationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="precipitation:"
+        android:textSize="@dimen/textXXLarge"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/spacingXXSmall"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windTxt" />
+
+    <TextView
+        android:id="@+id/visibilityTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="visibility:"
+        android:textSize="@dimen/textXXLarge"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/spacingXXSmall"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precipitationTxt" />
+
+    <ImageView
+        android:id="@+id/weatherImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="@dimen/spacingXXXLarge"
+        app:layout_constraintBottom_toBottomOf="@+id/degreeTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/degreeTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

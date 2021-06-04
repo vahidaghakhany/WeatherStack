@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+
+
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.coreVersionCode
+        versionName rootProject.ext.coreVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+
+    androidExtensions {
+        experimental = true
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "API_URL", "\"$rootProject.ext.remoteApiUrl\""
+        }
+
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "API_URL", "\"$rootProject.ext.remoteApiUrl\""
+            buildConfigField "String", "API_KEY", "\"$rootProject.ext.remoteApiKey\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+
+
+
+    // Support Library AndroidX
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompatVersion"
+    implementation "com.google.android.material:material:$rootProject.ext.supportVersion"
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.ext.supportVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.ext.recyclerVersion"
+    implementation "androidx.vectordrawable:vectordrawable:$rootProject.ext.vectordrawableVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintLayoutVersion"
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.archLifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$rootProject.ext.archLifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
+    kapt "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.archLifecycleVersion"
+    testImplementation "androidx.arch.core:core-testing:$rootProject.ext.archTestVersion"
+
+    // Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.ext.coroutineVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.ext.coroutineVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.OKHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.OKHttpVersion"
+
+    // Koin
+    implementation "io.insert-koin:koin-core:$rootProject.ext.koinVersion"
+    implementation "io.insert-koin:koin-androidx-viewmodel:$rootProject.ext.koinVersion"
+    implementation "io.insert-koin:koin-androidx-scope:$rootProject.ext.koinVersion"
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+}
